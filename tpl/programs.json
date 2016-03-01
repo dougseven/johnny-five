@@ -924,6 +924,16 @@
         ]
       },
       {
+        "file": "grove-multi-th02.js",
+        "title": "Multi - TH02",
+        "breadboards": [
+          {"name": "humidity-th02", "title": "TH02"}
+        ],
+        "externals": [
+          { "title": "Grove - Temperature & Humidity Sensor (High-Accuracy & Mini)", "href": "http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HighAccuracy-Mini-p-1921.html"}
+        ]
+      },
+      {
         "file": "multi-SI7020.js",
         "title": "Multi - SI7020",
         "breadboards": [
