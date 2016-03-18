@@ -14,7 +14,7 @@ Demonstrates changing intensity of an RGB LED. Requires RGB LED on pins that sup
 ##### RGB LED. (Arduino UNO)
 
 
-Basic example with RGB LED connected to pins 6, 5, and 3 for red, green, and blue respectively.
+RGB LED connected to pins 6, 5, and 3 for red, green, and blue respectively.
 
 
 ![docs/breadboard/led-rgb.png](breadboard/led-rgb.png)<br>
@@ -46,32 +46,28 @@ board.on("ready", function() {
   console.log("100% red");
   led.color("#FF0000");
 
-  temporal.queue([
-    {
-      // After 3 seconds, dim to 30% intensity
-      wait: 3000,
-      task: function() {
-        console.log("30% red");
-        led.intensity(30);
-      }
-    },
-    {
-      // 3 secs then turn blue, still 30% intensity
-      wait: 3000,
-      task: function() {
-        console.log("30% blue");
-        led.color("#0000FF");
-      }
-    },
-    {
-      // Another 3 seconds, go full intensity blue
-      wait: 3000,
-      task: function() {
-        console.log("100% blue");
-        led.intensity(100);
-      }
-    },
-  ]);
+  temporal.queue([{
+    // After 3 seconds, dim to 30% intensity
+    wait: 3000,
+    task: function() {
+      console.log("30% red");
+      led.intensity(30);
+    }
+  }, {
+    // 3 secs then turn blue, still 30% intensity
+    wait: 3000,
+    task: function() {
+      console.log("30% blue");
+      led.color("#0000FF");
+    }
+  }, {
+    // Another 3 seconds, go full intensity blue
+    wait: 3000,
+    task: function() {
+      console.log("100% blue");
+      led.intensity(100);
+    }
+  }, ]);
 });
 
 ```

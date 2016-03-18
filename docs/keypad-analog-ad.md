@@ -27,7 +27,11 @@ node eg/keypad-analog-ad.js
 
 
 ```javascript
-var argv = require("minimist")(process.argv.slice(2), { default: { show: 1 } });
+var argv = require("minimist")(process.argv.slice(2), {
+  default: {
+    show: 1
+  }
+});
 var five = require("johnny-five");
 var board = new five.Board();
 
@@ -62,13 +66,11 @@ board.on("ready", function() {
   }
 
   ["change", "press", "hold", "release"].forEach(function(eventType) {
-    keypad.on(eventType, function(data) {
-      console.log("Event: %s, Target: %s", eventType, data.which);
+    keypad.on(eventType, function(event) {
+      console.log("Event: %s, Target: %s", eventType, event.which);
     });
   });
 });
-
-
 
 ```
 

@@ -5,16 +5,23 @@
     "examples": [
       {
         "file": "board.js",
-        "title": "Basic Board initialization",
+        "title": "Board - Basic Initialization",
         "breadboards": [
-          {"name": "led-13", "title": "LED on pin 13 (Arduino UNO)", "description": "Basic example with LED inserted directly into pin 13"}
+          {"name": "led-13", "title": "LED on pin 13 (Arduino UNO)", "description": "LED inserted directly into pin 13"}
         ]
       },
       {
         "file": "board-with-port.js",
         "title": "Board - Specify port",
         "breadboards": [
-          {"name": "led-13", "title": "LED on pin 13 (Arduino UNO)", "description": "Basic example with LED inserted directly into pin 13"}
+          {"name": "led-13", "title": "LED on pin 13 (Arduino UNO)", "description": "LED inserted directly into pin 13"}
+        ]
+      },
+      {
+        "file": "board-cleanup.js",
+        "title": "Board - Cleanup in 'exit' event",
+        "breadboards": [
+          {"name": "led-13", "title": "LED on pin 13 (Arduino UNO)"}
         ]
       },
       {
@@ -25,7 +32,7 @@
         "file": "repl.js",
         "title": "REPL",
         "breadboards": [
-          {"name": "led-13", "title": "LED on pin 13 (Arduino UNO)", "description": "Basic example with LED inserted directly into pin 13"}
+          {"name": "led-13", "title": "LED on pin 13 (Arduino UNO)", "description": "LED inserted directly into pin 13"}
         ]
       },
       {
@@ -40,61 +47,6 @@
     ]
   },
   {
-    "topic": "Expander",
-    "classes": ["Expander"],
-    "examples": [
-      {
-        "file": "expander-MCP23017.js",
-        "title": "Expander - MCP23017",
-        "description": "Using an MCP23017 Expander as a Virtual Board (16 Pin Digital IO). Pins 15-17 are used to set the I2C hardware address. By default, these pins must be connected to ground. See page eight of the [data sheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21952b.pdf)"
-      },
-      {
-        "file": "expander-MCP23008.js",
-        "title": "Expander - MCP23008",
-        "description": "Using an MCP23008 Expander as a Virtual Board (8 Pin Digital IO)"
-      },
-      {
-        "file": "expander-PCF8574.js",
-        "title": "Expander - PCF8574",
-        "description": "Using an PCF8574 Expander as a Virtual Board (WaveShare 8 Pin Digital IO)"
-      },
-      {
-        "file": "expander-PCF8575.js",
-        "title": "Expander - PCF8575",
-        "description": "Using an PCF8575 Expander as a Virtual Board (SparkFun I2C Expander Breakout - PCF8575)"
-      },
-      {
-        "file": "expander-PCA9685.js",
-        "title": "Expander - PCA9685",
-        "description": "Using an PCA9685 Expander as a Virtual Board (Adafruit 16 Channel PWM Shield)"
-      },
-      {
-        "file": "expander-PCF8591.js",
-        "title": "Expander - PCF8591",
-        "description": "Using an PCF8591 Expander as a Virtual Board (4 Pin Analog Input)"
-      },
-      {
-        "file": "expander-74HC595.js",
-        "title": "Expander - 74HC595",
-        "description": "Using an 74HC595 Expander as a Virtual Board (8 Pin Digital Output)"
-      },
-      {
-        "file": "expander-MUXSHIELD2-mixed.js",
-        "title": "Expander - MUXSHIELD2, Digital Input and Output",
-        "description": "Using a MUXSHIELD2 Expander as a Virtual Board. Displays pin state in console graph. (`npm install barcli`)",
-        "images": [
-          {"file": "expander-MUXSHIELD2-mixed-console-graph.png", "title": "Example output"}
-        ]
-      },
-      {
-        "file": "expander-MUXSHIELD2-analog-read.js",
-        "title": "Expander - MUXSHIELD2, Analog Sensors",
-        "description": "Using a MUXSHIELD2 Expander as a Virtual Board. Displays value of potentiometers in console graph. (`npm install barcli`)"
-      }
-
-    ]
-  },
-  {
     "topic": "LED",
     "classes": ["Led"],
     "examples": [
@@ -103,12 +55,12 @@
         "title": "LED",
         "description": "Basic LED example",
         "breadboards": [
-          {"name": "led-13", "title": "LED on pin 13 (Arduino UNO)", "description": "Basic example with LED inserted directly into pin 13"},
-          {"name": "led-resistor", "title": "LED on pin 13 with breadboard and resistor (Arduino UNO)", "description": "Basic example with LED on a breadboard and demonstrating use of a resistor"},
-          {"name": "led-13-mega", "title": "LED on pin 13 (Arduino Mega)", "description": "Basic example with LED inserted directly into pin 13"}
+          {"name": "led-13", "title": "LED on pin 13 (Arduino UNO)", "description": "LED inserted directly into pin 13"},
+          {"name": "led-resistor", "title": "LED on pin 13 with breadboard and resistor (Arduino UNO)", "description": "LED on a breadboard and demonstrating use of a resistor"},
+          {"name": "led-13-mega", "title": "LED on pin 13 (Arduino Mega)", "description": "LED inserted directly into pin 13"}
         ],
         "images": [
-          {"file": "led.jpg", "title": "LED on pin 13 (Arduino UNO)", "description": "Basic example with LED inserted directly into pin 13"}
+          {"file": "led.jpg", "title": "LED on pin 13 (Arduino UNO)", "description": "LED inserted directly into pin 13"}
         ]
       },
       {
@@ -125,11 +77,11 @@
         "title": "LED - Blink",
         "description": "Basic LED blink example.",
         "breadboards": [
-          {"name": "led-13", "title": "LED on pin 13 (Arduino UNO)", "description": "Basic example with LED inserted directly into pin 13"},
-          {"name": "led-resistor", "title": "LED on pin 13 with breadboard and resistor (Arduino UNO)", "description": "Basic example with LED on a breadboard and demonstrating use of a resistor"}
+          {"name": "led-13", "title": "LED on pin 13 (Arduino UNO)", "description": "LED inserted directly into pin 13"},
+          {"name": "led-resistor", "title": "LED on pin 13 with breadboard and resistor (Arduino UNO)", "description": "LED on a breadboard and demonstrating use of a resistor"}
         ],
         "images": [
-          {"file": "led.jpg", "title": "LED on pin 13 (Arduino UNO)", "description": "Basic example with LED inserted directly into pin 13"}
+          {"file": "led.jpg", "title": "LED on pin 13 (Arduino UNO)", "description": "LED inserted directly into pin 13"}
         ]
       },
       {
@@ -137,7 +89,7 @@
         "title": "LED - Pulse",
         "description": "LED pulse example that fades an LED in and out repeatedly. Requires LED on pin that supports PWM (usually denoted by ~).",
         "breadboards": [
-          {"name": "led-11-pwm", "title": "LED on pin 11 (Arduino UNO)", "description": "Basic example with LED inserted directly into pin 11."}
+          {"name": "led-11-pwm", "title": "LED on pin 11 (Arduino UNO)", "description": "LED inserted directly into pin 11."}
         ]
       },
       {
@@ -145,7 +97,7 @@
         "title": "LED - Pulse with animation",
         "description": "LED pulse example that incrementally fades an LED brighter and brighter. Requires LED on pin that supports PWM (usually denoted by ~).",
         "breadboards": [
-          {"name": "led-11-pwm", "title": "LED on pin 11 (Arduino UNO)", "description": "Basic example with LED inserted directly into pin 11."}
+          {"name": "led-11-pwm", "title": "LED on pin 11 (Arduino UNO)", "description": "LED inserted directly into pin 11."}
         ]
       },
       {
@@ -153,7 +105,7 @@
         "title": "LED - Fade",
         "description": "LED fade example that fades in an led, waits 5 seconds, and then fades it out. Requires LED on pin that supports PWM (usually denoted by ~).",
         "breadboards": [
-          {"name": "led-11-pwm", "title": "LED on pin 11 (Arduino UNO)", "description": "Basic example with LED inserted directly into pin 11."}
+          {"name": "led-11-pwm", "title": "LED on pin 11 (Arduino UNO)", "description": "LED inserted directly into pin 11."}
         ]
       },
       {
@@ -166,7 +118,7 @@
         "title": "LED - Fade with animation",
         "description": "LED fade example that fades an LED up and down to varying values. Requires LED on pin that supports PWM (usually denoted by ~).",
         "breadboards": [
-          {"name": "led-11-pwm", "title": "LED on pin 11 (Arduino UNO)", "description": "Basic example with LED inserted directly into pin 11."}
+          {"name": "led-11-pwm", "title": "LED on pin 11 (Arduino UNO)", "description": "LED inserted directly into pin 11."}
         ]
       },
       {
@@ -174,7 +126,7 @@
         "title": "LED - Demo sequence",
         "description": "Demonstrates stringing some of the LED commands together to demonstrate LED capabilities. Requires LED on pin that supports PWM (usually denoted by ~).",
         "breadboards": [
-          {"name": "led-11-pwm", "title": "LED on pin 11 (Arduino UNO)", "description": "Basic example with LED inserted directly into pin 11."}
+          {"name": "led-11-pwm", "title": "LED on pin 11 (Arduino UNO)", "description": "LED inserted directly into pin 11."}
         ]
       },
       {
@@ -184,21 +136,26 @@
       },
       {
         "file": "led-array.js",
-        "title": "LED - Array",
+        "title": "LEDs - An array of LEDs",
         "description": "Demonstrates controlling multiple LEDs at once through the use of an LED array. Requires LEDs on pins that support PWM (usually denoted by ~)."
       },
       {
         "file": "led-array-controller.js",
-        "title": "LED - Array Controller",
+        "title": "LEDs - Controlling an array of LEDs",
         "description": "Demonstrates controlling multiple LEDs at once through the use of an LED array and an analog Potentiometer."
-      },
-
+      }
+    ]
+  },
+  {
+    "topic": "LED: RGB",
+    "classes": ["Led.RGB"],
+    "examples": [
       {
         "file": "led-rgb.js",
         "title": "LED - RGB",
         "description": "Demonstrates use of an RGB LED (common cathode) by setting its color to red (`#ff0000`) and making it blink. Requires RGB LED on pins that support PWM (usually denoted by ~).",
         "breadboards": [
-          {"name": "led-rgb", "title": "Common Cathode RGB LED. (Arduino UNO)", "description": "Basic example with RGB LED connected to pins 6, 5, and 3 for red, green, and blue respectively. The common pin is connected to ground."}
+          {"name": "led-rgb", "title": "Common Cathode RGB LED. (Arduino UNO)", "description": "RGB LED connected to pins 6, 5, and 3 for red, green, and blue respectively. The common pin is connected to ground."}
         ]
       },
       {
@@ -206,7 +163,7 @@
         "title": "LED - RGB (Common Anode)",
         "description": "Demonstrates use of an RGB LED (common anode) by setting its color to red (`#ff0000`) and making it blink. Requires RGB LED on pins that support PWM (usually denoted by ~).",
         "breadboards": [
-          {"name": "led-rgb-anode", "title": "Common Anode RGB LED. (Arduino UNO)", "description": "Basic example with RGB LED connected to pins 6, 5, and 3 for red, green, and blue respectively. The common pin is connected to +5v."}
+          {"name": "led-rgb-anode", "title": "Common Anode RGB LED. (Arduino UNO)", "description": "RGB LED connected to pins 6, 5, and 3 for red, green, and blue respectively. The common pin is connected to +5v."}
         ]
       },
       {
@@ -219,7 +176,7 @@
         "title": "LED - RGB Intensity",
         "description": "Demonstrates changing intensity of an RGB LED. Requires RGB LED on pins that support PWM (usually denoted by ~).",
         "breadboards": [
-          {"name": "led-rgb", "title": "RGB LED. (Arduino UNO)", "description": "Basic example with RGB LED connected to pins 6, 5, and 3 for red, green, and blue respectively."}
+          {"name": "led-rgb", "title": "RGB LED. (Arduino UNO)", "description": "RGB LED connected to pins 6, 5, and 3 for red, green, and blue respectively."}
         ]
       },
       {
@@ -227,7 +184,7 @@
         "title": "LED - Rainbow",
         "description": "Demonstrates use of an RGB LED (common cathode) by cycling through rainbow colors. Requires RGB LED on pins that support PWM (usually denoted by ~).",
         "breadboards": [
-          {"name": "led-rgb", "title": "Common Cathode RGB LED. (Arduino UNO)", "description": "Basic example with RGB LED connected to pins 6, 5, and 3 for red, green, and blue respectively. The common pin is connected to ground."}
+          {"name": "led-rgb", "title": "Common Cathode RGB LED. (Arduino UNO)", "description": "RGB LED connected to pins 6, 5, and 3 for red, green, and blue respectively. The common pin is connected to ground."}
         ]
       },
       {
@@ -237,7 +194,13 @@
         "breadboards": [
           {"name": "tessel-led-blinkm-basic", "title": "Tessel - BlinkM Basick", "description": "emonstrates use of a BlinkM, with a Tessel 2, by cycling through rainbow colors."}
         ]
-      },
+      }
+    ]
+  },
+  {
+    "topic": "LED: Digits & Matrix",
+    "classes": ["Led.Digits", "Led.Matrix"],
+    "examples": [
       {
         "name": "led-digits-clock",
         "title": "LED - Digital Clock",
@@ -323,7 +286,7 @@
         "file": "servo-continuous.js",
         "title": "Servo - Continuous",
         "breadboards": [
-          {"name": "servo", "title": "Servo on pin 10", "description": "Basic example with servo connected to pin 10. Requires servo on pin that supports PWM (usually denoted by ~)."}
+          {"name": "servo", "title": "Servo on pin 10", "description": "Servo connected to pin 10. Requires servo on pin that supports PWM (usually denoted by ~)."}
         ]
       },
       {
@@ -334,28 +297,47 @@
         "file": "servo-prompt.js",
         "title": "Servo - Prompt",
         "breadboards": [
-          {"name": "servo", "title": "Servo on pin 10", "description": "Basic example with servo connected to pin 10. Requires servo on pin that supports PWM (usually denoted by ~)."}
+          {"name": "servo", "title": "Servo on pin 10", "description": "Servo connected to pin 10. Requires servo on pin that supports PWM (usually denoted by ~)."}
         ]
       },
       {
         "file": "servo-drive.js",
         "title": "Servo - Drive",
         "breadboards": [
-          {"name": "servo-two", "title": "Servos on pins 9 and 10", "description": "Basic example with servos connected to pins 9 and 10. Requires servos on pins that support PWM (usually denoted by ~)."}
+          {"name": "servo-two", "title": "Servos on pins 9 and 10", "description": "Servos connected to pins 9 and 10. Requires servos on pins that support PWM (usually denoted by ~)."}
         ]
       },
       {
         "file": "servo-sweep.js",
         "title": "Servo - Sweep",
         "breadboards": [
-          {"name": "servo", "title": "Servo on pin 10", "description": "Basic example with servo connected to pin 10. Requires servo on pin that supports PWM (usually denoted by ~)."}
+          {"name": "servo", "title": "Servo on pin 10", "description": "Servo connected to pin 10. Requires servo on pin that supports PWM (usually denoted by ~)."}
         ]
       },
       {
         "file": "servo-array.js",
-        "title": "Servo - Array of servos",
+        "title": "Servos - An array of servos",
         "breadboards": [
-          {"name": "servo-two", "title": "Servos on pins 9 and 10", "description": "Basic example with servos connected to pins 9 and 10. Requires servos on pins that support PWM (usually denoted by ~)."}
+          {"name": "servo-two", "title": "Servos on pins 9 and 10", "description": "Servos connected to pins 9 and 10. Requires servos on pins that support PWM (usually denoted by ~)."}
+        ]
+      }
+    ]
+  },
+  {
+    "topic": "GPS",
+    "classes": ["GPS"],
+    "examples": [
+      {
+        "file": "gps.js",
+        "title": "GPS - Default GPS",
+        "description": "When using GPS class with an Arduino (or similar microcontroller), be sure to upload the StandardFirmataPlus firmware to your board."
+      },
+      {
+        "file": "gps-adafruit.js",
+        "title": "GPS - Adafruit Ultimate GPS Breakout",
+        "description": "When using GPS class with an Arduino (or similar microcontroller), be sure to upload the StandardFirmataPlus firmware to your board.",
+        "breadboards": [
+          {"name": "gps-adafruit", "title": "Adafruit Ultimate GPS Breakout", "description": "Example of Adafruit Ultimate GPS on serial."}
         ]
       }
     ]
@@ -368,14 +350,14 @@
         "file": "servo-animation.js",
         "title": "Servo - Animation",
         "breadboards": [
-          {"name": "servo", "title": "Servo on pin 10", "description": "Basic example with servo connected to pin 10. Requires servo on pin that supports PWM (usually denoted by ~)."}
+          {"name": "servo", "title": "Servo on pin 10", "description": "Servo connected to pin 10. Requires servo on pin that supports PWM (usually denoted by ~)."}
         ]
       },
       {
         "file": "servo-animation-leg.js",
         "title": "Servo - Leg Animation",
         "breadboards": [
-          {"name": "servo-three", "title": "Servos on pins 9, 10, 11", "description": "Basic example with servos connected to pins 9, 10, and 11. Requires servos on pins that support PWM (usually denoted by ~)."}
+          {"name": "servo-three", "title": "Servos on pins 9, 10, 11", "description": "Servos connected to pins 9, 10, and 11. Requires servos on pins that support PWM (usually denoted by ~)."}
         ]
       }
     ]
@@ -483,11 +465,11 @@
     "examples": [
       {
         "file": "esc-keypress.js",
-        "title": "ESC - Keypress"
+        "title": "ESC - Keypress controlled ESCs"
       },
       {
         "file": "esc-dualshock.js",
-        "title": "ESC - Dualshock"
+        "title": "ESC - Dualshock controlled ESCs"
       },
       {
         "file": "esc-PCA9685.js",
@@ -503,7 +485,7 @@
       },
       {
         "file": "esc-array.js",
-        "title": "ESC - ESC Array"
+        "title": "ESCs - An array of ESCs"
       }
     ]
   },
@@ -562,15 +544,41 @@
       },
       {
         "file": "keypad-MPR121.js",
-        "title": "Keypad - MPR121"
+        "title": "Touchpad - MPR121"
       },
       {
-        "file": "keypad-MPR121QR2.js",
-        "title": "Keypad - MPR121QR2"
+        "file": "keypad-MPR121_SHIELD.js",
+        "title": "Touchpad - MPR121_SHIELD"
+      },
+      {
+        "file": "keypad-MPR121_KEYPAD.js",
+        "title": "Touchpad - MPR121_KEYPAD"
+      },
+      {
+        "file": "keypad-MPR121-sensitivity.js",
+        "title": "Touchpad - MPR121, Sensitivity",
+        "breadboards": [
+          {"name": "keypad-MPR121_SHIELD"}
+        ]
+      },
+      {
+        "file": "keypad-MPR121QR2_SHIELD.js",
+        "title": "Touchpad - MPR121QR2_SHIELD"
       },
       {
         "file": "keypad-QTOUCH.js",
-        "title": "Keypad - Grove QTouch"
+        "title": "Touchpad - Grove QTouch"
+      },
+      {
+        "file": "keypad-3X4_I2C_NANO_BACKPACK.js",
+        "title": "Keypad - 3x4 I2C Nano Backpack",
+        "images": [
+          {"file": "keypad-i2c-backpack-1.jpg", "title": "Nano soldering assembly 1"},
+          {"file": "keypad-i2c-backpack-2.jpg", "title": "Nano soldering assembly 2"}
+        ],
+        "externals": [
+          { "title": "I2C Backback Firmare", "href": "https://github.com/rwaldron/johnny-five/blob/master/firmwares/keypad_3x4_i2c_nano_backpack.ino"}
+        ]
       }
     ]
   },
@@ -598,11 +606,19 @@
       },
       {
         "file": "shift-register-seven-segment.js",
-        "title": "Shift Register - Seven segment controller"
+        "title": "Shift Register - Seven Segment controller"
+      },
+      {
+        "file": "shift-register-seven-segment-anode.js",
+        "title": "Shift Register - Common Anode Seven Segment controller"
       },
       {
         "file": "shift-register-daisy-chain.js",
-        "title": "Shift Register - Seven segments, daisy chained"
+        "title": "Shift Register - Seven segments, Chained"
+      },
+      {
+        "file": "shift-register-daisy-chain-anode.js",
+        "title": "Shift Register - Common Anode Seven segments, Chained"
       }
     ]
   },
@@ -635,53 +651,53 @@
       {
         "file": "proximity.js",
         "title": "Proximity",
-        "description": "Basic infrared Proximity example"
+        "description": "Infrared Proximity example"
       },
       {
         "file": "proximity-GP2Y0A710K0F.js",
         "title": "Proximity - GP2Y0A710K0F",
-        "description": "Basic infrared Proximity example with GP2Y0A710K0F sensor."
+        "description": "Infrared Proximity example with GP2Y0A710K0F sensor."
       },
       {
         "file": "proximity-srf10.js",
         "title": "Proximity - SRF10",
-        "description": "Basic sonar Proximity example with SRF10 sensor."
+        "description": "Sonar Proximity example with SRF10 sensor."
       },
       {
         "file": "proximity-mb1000.js",
         "title": "Proximity - MB1000",
         "breadboards": [
-          {"name": "proximity-mb1003", "title": "Proximity - MB1000", "description": "Basic sonar Proximity example with MB1000 sensor."}
+          {"name": "proximity-mb1003", "title": "Proximity - MB1000", "description": "Sonar Proximity example with MB1000 sensor."}
         ]
       },
       {
         "file": "proximity-mb1010.js",
         "title": "Proximity - MB1010",
         "breadboards": [
-          {"name": "proximity-mb1003", "title": "Proximity - MB1010", "description": "Basic sonar Proximity example with MB1010 sensor."}
+          {"name": "proximity-mb1003", "title": "Proximity - MB1010", "description": "Sonar Proximity example with MB1010 sensor."}
         ]
       },
       {
         "file": "proximity-mb1003.js",
         "title": "Proximity - MB1003",
-        "description": "Basic sonar Proximity example with MB1003 sensor."
+        "description": "Sonar Proximity example with MB1003 sensor."
       },
       {
         "file": "proximity-mb1230.js",
         "title": "Proximity - MB1230",
         "breadboards": [
-          {"name": "proximity-mb1003", "title": "Proximity - MB1230", "description": "Basic sonar Proximity example with MB1230 sensor."}
+          {"name": "proximity-mb1003", "title": "Proximity - MB1230", "description": "Sonar Proximity example with MB1230 sensor."}
         ]
       },
       {
         "file": "proximity-hcsr04.js",
         "title": "Proximity - HC-SR04",
-        "description": "Basic ping Proximity example for any of the [`PING_PULSE_IN`](http://johnny-five.io/api/proximity/#controller-alias-table) components (eg. `HCSR04` or Parallax's Ultrasonic Ping). [PingFirmata](http://johnny-five.io/api/proximity/#pingfirmata) must be loaded onto Arduino-compatible boards to enable this component."
+        "description": "'Ultrasonic Ping' Proximity example for any of the [`PING_PULSE_IN`](http://johnny-five.io/api/proximity/#controller-alias-table) components (eg. `HCSR04` or Parallax's Ultrasonic Ping). [PingFirmata](http://johnny-five.io/api/proximity/#pingfirmata) must be loaded onto Arduino-compatible boards to enable this component."
       },
       {
         "file": "proximity-hcsr04-analog.js",
         "title": "Proximity - HC-SR04 (Analog)",
-        "description": "Basic ping Proximity example for any of the [`PING_PULSE_IN`](http://johnny-five.io/api/proximity/#controller-alias-table) components (eg. `HCSR04` or Parallax's Ultrasonic Ping). [PingFirmata](http://johnny-five.io/api/proximity/#pingfirmata) must be loaded onto Arduino-compatible boards to enable this component."
+        "description": "'Ultrasonic Ping' Proximity example for any of the [`PING_PULSE_IN`](http://johnny-five.io/api/proximity/#controller-alias-table) components (eg. `HCSR04` or Parallax's Ultrasonic Ping). [PingFirmata](http://johnny-five.io/api/proximity/#pingfirmata) must be loaded onto Arduino-compatible boards to enable this component."
       },
       {
         "file": "proximity-hcsr04-i2c.js",
@@ -718,18 +734,18 @@
       {
         "file": "motion.js",
         "title": "Motion",
-        "description": "Basic Passive Infrared Motion detection."
+        "description": "Motion detection with Passive Infrared sensor."
       },
       {
         "file": "motion-gp2y0d805z0f.js",
         "title": "Motion - GP2Y0D805Z0F",
-        "description": "Basic GP2Y0D805Z0F motion detection."
+        "description": "Motion detection with GP2Y0D805Z0F sensor."
       },
       {
         "file": "motion-gp2y0d810z0f.js",
         "title": "Motion - GP2Y0D810Z0F",
         "breadboards": [
-          {"name": "GP2Y0D810Z0F", "title": "Motion - GP2Y0D810Z0F", "description": "Basic GP2Y0D810Z0F motion detection."}
+          {"name": "GP2Y0D810Z0F", "title": "Motion - GP2Y0D810Z0F", "description": "Motion detection with GP2Y0D810Z0F sensor."}
 
         ]
       },
@@ -737,7 +753,7 @@
         "file": "motion-gp2y0d815z0f.js",
         "title": "Motion - GP2Y0D810Z0F",
         "breadboards": [
-          {"name": "GP2Y0D810Z0F", "title": "Motion - GP2Y0D815Z0F", "description": "Basic GP2Y0D815Z0F motion detection."}
+          {"name": "GP2Y0D810Z0F", "title": "Motion - GP2Y0D815Z0F", "description": "Motion detection with GP2Y0D815Z0F sensor."}
 
         ]
       },
@@ -745,7 +761,7 @@
         "file": "motion-GP2Y0A60SZLF.js",
         "title": "Motion - GP2Y0A60SZLF",
         "breadboards": [
-          {"name": "GP2Y0D810Z0F", "title": "Motion - GP2Y0A60SZLF", "description": "Basic GP2Y0D815Z0F motion detection."}
+          {"name": "GP2Y0D810Z0F", "title": "Motion - GP2Y0A60SZLF", "description": "Motion detection with GP2Y0D815Z0F sensor."}
 
         ]
       }
@@ -914,6 +930,18 @@
         ]
       },
       {
+        "file": "multi-bmp085.js",
+        "title": "Multi - BMP085",
+        "breadboards": [
+          {"name": "multi-bmp085-sfe", "title": "BMP085"},
+          {"name": "multi-bmp085", "title": "BMP085 (Adafruit)"}
+        ],
+        "externals": [
+          { "title": "BMP085 Barometric Pressure/Temperature/Altitude Sensor", "href": "https://www.adafruit.com/products/391"},
+          { "title": "Grove - Barometer Sensor（BMP085)", "href": "http://www.seeedstudio.com/depot/grove-barometer-sensor-p-1199.html"}
+        ]
+      },
+      {
         "file": "multi-htu21d.js",
         "title": "Multi - HTU21D",
         "breadboards": [
@@ -921,6 +949,13 @@
         ],
         "externals": [
           { "title": "HTU21D Humidity/Temperature Sensor", "href": "https://www.adafruit.com/products/1899"}
+        ]
+      },
+      {
+        "file": "multi-TH02.js",
+        "title": "Multi - TH02",
+        "externals": [
+          { "title": "Grove - Temperature&Humidity Sensor (High-Accuracy & Mini)", "href": "http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HighAccuracy-Mini-p-1921.html"}
         ]
       },
       {
@@ -933,12 +968,16 @@
         "externals": [
           { "title": "SI7020 - I2C Multi Sensor", "href": "https://tessel.io/docs/climate"}
         ]
+      },
+      {
+        "file": "multi-MS5611.js",
+        "title": "Multi - MS5611"
       }
     ]
   },
   {
     "topic": "Sensors",
-    "classes": ["Sensor", "Accelerometer", "Gyro", "Thermometer"],
+    "classes": ["Sensor", "Accelerometer", "Gyro", "Thermometer", "Barometer", "Altimeter"],
     "examples": [
       {
         "file": "sensor.js",
@@ -1002,35 +1041,35 @@
       },
       {
         "file": "temperature-tmp36.js",
-        "title": "Temperature - TMP36"
+        "title": "Thermometer - TMP36"
       },
       {
         "file": "temperature-tmp102.js",
-        "title": "Temperature - TMP102"
+        "title": "Thermometer - TMP102"
       },
       {
         "file": "temperature-lm35.js",
-        "title": "Temperature - LM35"
+        "title": "Thermometer - LM35"
       },
       {
         "file": "temperature-lm335.js",
-        "title": "Temperature - LM335"
+        "title": "Thermometer - LM335"
       },
       {
         "file": "temperature-ds18b20.js",
-        "title": "Temperature - DS18B20"
+        "title": "Thermometer - DS18B20"
       },
       {
         "file": "temperature-max31850k.js",
-        "title": "Temperature - MAX31850"
+        "title": "Thermometer - MAX31850"
       },
       {
         "file": "temperature-mpu6050.js",
-        "title": "Temperature - MPU6050"
+        "title": "Thermometer - MPU6050"
       },
       {
         "file": "temperature-htu21d.js",
-        "title": "Temperature - HTU21D",
+        "title": "Thermometer - HTU21D",
         "breadboards": [
           {"name": "humidity-htu21d", "title": "HTU21D"}
         ],
@@ -1040,7 +1079,7 @@
       },
       {
         "file": "temperature-MCP9808.js",
-        "title": "Temperature - MCP9808",
+        "title": "Thermometer - MCP9808",
         "breadboards": [
           {"name": "temperature-MCP9808", "title": "MCP9808"},
           {"name": "temperature-MCP9808-tessel", "title": "MCP9808"}
@@ -1081,7 +1120,7 @@
       },
       {
         "file": "temperature-mpl3115a2.js",
-        "title": "Temperature - MPL3115A2",
+        "title": "Thermometer - MPL3115A2",
         "breadboards": [
           {"name": "barometer-mpl3115a2", "title": "MPL3115A2"}
         ],
@@ -1091,7 +1130,7 @@
       },
       {
         "file": "temperature-mpl115a2.js",
-        "title": "Temperature - MPL115A2",
+        "title": "Thermometer - MPL115A2",
         "breadboards": [
           {"name": "multi-mpl115a2", "title": "MPL115A2"}
         ],
@@ -1113,6 +1152,25 @@
         ]
       },
       {
+        "file": "barometer-BMP085.js",
+        "title": "Barometer - BMP085",
+        "breadboards": [
+          {"name": "multi-bmp085-sfe", "title": "BMP085"},
+          {"name": "multi-bmp085", "title": "BMP085 (Adafruit)"}
+        ],
+        "externals": [
+          { "title": "BMP085 Barometric Pressure/Temperature/Altitude Sensor", "href": "https://www.adafruit.com/products/391"},
+          { "title": "Grove - Barometer Sensor（BMP085)", "href": "http://www.seeedstudio.com/depot/grove-barometer-sensor-p-1199.html"}
+        ]
+      },
+      {
+        "file": "barometer-MS5611.js",
+        "title": "Barometer - MS5611",
+        "breadboards": [
+          {"name": "multi-MS5611", "title": "Barometer - MS5611"}
+        ]
+      },
+      {
         "file": "hygrometer-htu21d.js",
         "title": "Hygrometer - HTU21D",
         "breadboards": [
@@ -1124,7 +1182,7 @@
       },
       {
         "file": "temperature-BMP180.js",
-        "title": "Temperature - BMP180",
+        "title": "Thermometer - BMP180",
         "breadboards": [
           {"name": "multi-bmp180-sfe", "title": "BMP180"},
           {"name": "multi-bmp180", "title": "BMP180 (Adafruit)"}
@@ -1136,8 +1194,20 @@
         ]
       },
       {
+        "file": "temperature-bmp085.js",
+        "title": "Thermometer - BMP085",
+        "breadboards": [
+          {"name": "multi-bmp085-sfe", "title": "BMP085"},
+          {"name": "multi-bmp085", "title": "BMP085 (Adafruit)"}
+        ],
+        "externals": [
+          { "title": "BMP085 Barometric Pressure/Temperature/Altitude Sensor", "href": "https://www.adafruit.com/products/391"},
+          { "title": "Grove - Barometer Sensor（BMP085)", "href": "http://www.seeedstudio.com/depot/grove-barometer-sensor-p-1199.html"}
+        ]
+      },
+      {
         "file": "temperature-SI7020.js",
-        "title": "Temperature - SI7020",
+        "title": "Thermometer - SI7020",
         "breadboards": [
           {"name": "temperature-SI7020", "title": "Tessel with SI7020"},
           {"name": "temperature-SI7020-uno", "title": "Arduino with SI7020"}
@@ -1145,7 +1215,149 @@
         "externals": [
           { "title": "SI7020 - I2C Temperature Sensor", "href": "https://tessel.io/docs/climate"}
         ]
+      },
+      {
+        "file": "temperature-MS5611.js",
+        "title": "Thermometer - MS5611",
+        "breadboards": [
+          {"name": "multi-MS5611", "title": "Thermometer - MS5611"}
+        ]
+      },
+      {
+        "file": "altimeter-MS5611.js",
+        "title": "Altimeter - MS5611",
+        "breadboards": [
+          {"name": "multi-MS5611", "title": "MS5611"}
+        ],
+        "alternates": [
+          {"file": "altimeter-MS5611-relative-elevation.js", "title": "MS5611 - Relative Elevation"}
+        ]
+      },
+      {
+        "file": "altimeter-BMP180.js",
+        "title": "Altimeter - BMP180",
+        "breadboards": [
+          {"name": "multi-bmp180-sfe", "title": "BMP180"},
+          {"name": "multi-bmp180", "title": "BMP180 (Adafruit)"}
+        ],
+        "alternates": [
+          {"file": "altimeter-BMP180-relative-elevation.js", "title": "BMP180 - Relative Elevation"}
+        ],
+        "externals": [
+          {
+            "title": "BMP180 Barometric Pressure/Temperature/Altitude Sensor",
+            "href": "https://www.adafruit.com/products/1603"
+          },
+          {
+            "title": "SparkFun Barometric Pressure Sensor Breakout - BMP180",
+            "href": "https://www.sparkfun.com/products/11824"
+          },
+          {
+            "title": "Grove - Barometer Sensor（BMP180)",
+            "href": "http://www.seeedstudio.com/depot/Grove-Barometer-SensorBMP180-p-1840.html"
+          }
+        ]
+      },
+      {
+        "file": "altimeter-BMP085.js",
+        "title": "Altimeter - BMP085",
+        "breadboards": [
+          {"name": "multi-bmp085-sfe", "title": "BMP085"},
+          {"name": "multi-bmp085", "title": "BMP085 (Adafruit)"}
+        ],
+        "alternates": [
+          {"file": "altimeter-BMP085-relative-elevation.js", "title": "BMP085 - Relative Elevation"}
+        ],
+        "externals": [
+          { "title": "BMP085 Barometric Pressure/Temperature/Altitude Sensor", "href": "https://www.adafruit.com/products/391"},
+          { "title": "Grove - Barometer Sensor（BMP085)", "href": "http://www.seeedstudio.com/depot/grove-barometer-sensor-p-1199.html"}
+        ]
+      },
+
+      {
+        "file": "temperature-TH02.js",
+        "title": "Thermometer - TH02",
+        "externals": [
+          { "title": "Grove - Temperature&Humidity Sensor (High-Accuracy & Mini)", "href": "http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HighAccuracy-Mini-p-1921.html"}
+        ]
+      },
+      {
+        "file": "hygrometer-TH02.js",
+        "title": "Hygrometer - TH02",
+        "externals": [
+          { "title": "Grove - Temperature&Humidity Sensor (High-Accuracy & Mini)", "href": "http://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HighAccuracy-Mini-p-1921.html"}
+        ]
       }
+    ]
+  },
+  {
+    "topic": "Expander",
+    "classes": ["Expander"],
+    "examples": [
+      {
+        "file": "expander-MCP23017.js",
+        "title": "Expander - MCP23017",
+        "description": "Using an MCP23017 Expander as a Virtual Board (16 Pin Digital IO). Pins 15-17 are used to set the I2C hardware address. By default, these pins must be connected to ground. See page eight of the [data sheet](http://ww1.microchip.com/downloads/en/DeviceDoc/21952b.pdf)"
+      },
+      {
+        "file": "expander-MCP23008.js",
+        "title": "Expander - MCP23008",
+        "description": "Using an MCP23008 Expander as a Virtual Board (8 Pin Digital IO)"
+      },
+      {
+        "file": "expander-PCF8574.js",
+        "title": "Expander - PCF8574",
+        "description": "Using an PCF8574 Expander as a Virtual Board (WaveShare 8 Pin Digital IO)"
+      },
+      {
+        "file": "expander-PCF8575.js",
+        "title": "Expander - PCF8575",
+        "description": "Using an PCF8575 Expander as a Virtual Board (SparkFun I2C Expander Breakout - PCF8575)"
+      },
+      {
+        "file": "expander-PCA9685.js",
+        "title": "Expander - PCA9685",
+        "description": "Using an PCA9685 Expander as a Virtual Board (Adafruit 16 Channel PWM Shield)"
+      },
+      {
+        "file": "expander-PCF8591.js",
+        "title": "Expander - PCF8591",
+        "description": "Using an PCF8591 Expander as a Virtual Board (4 Pin Analog Input)"
+      },
+      {
+        "file": "expander-74HC595.js",
+        "title": "Expander - 74HC595",
+        "description": "Using an 74HC595 Expander as a Virtual Board (8 Pin Digital Output)"
+      },
+      {
+        "file": "expander-MUXSHIELD2-mixed.js",
+        "title": "Expander - MUXSHIELD2, Digital Input and Output",
+        "description": "Using a MUXSHIELD2 Expander as a Virtual Board. Displays pin state in console graph. (`npm install barcli`)",
+        "images": [
+          {"file": "expander-MUXSHIELD2-mixed-console-graph.png", "title": "Example output"}
+        ]
+      },
+      {
+        "file": "expander-MUXSHIELD2-analog-read.js",
+        "title": "Expander - MUXSHIELD2, Analog Sensors",
+        "description": "Using a MUXSHIELD2 Expander as a Virtual Board. Displays value of potentiometers in console graph. (`npm install barcli`)"
+      },
+      {
+        "file": "expander-CD74HC4067_NANO_BACKPACK.js",
+        "title": "Expander - CD74HC4067, 16 Channel Analog Input Breakout",
+        "description": "Using a CD74HC4067 connected to an Arduino Nano Backpack. Displays value of potentiometers in console graph. (`npm install barcli`)",
+        "breadboards": [
+          {"name": "expander-CD74HC4067-14-pots", "title": "Using 14 potentiometers!", "description": "The CD74HC4067 can accomodate up to 16 inputs"}
+        ],
+        "images": [
+          {"file": "CD74HC4067-3-pot-barcli.png", "title": "Barcli output"}
+        ],
+        "externals": [
+          { "title": "I2C Backback Firmare", "href": "https://github.com/rwaldron/johnny-five/blob/master/firmwares/cd74hc4067_i2c_backpack.ino"}
+        ]
+
+      }
+
     ]
   },
   {
@@ -1270,6 +1482,11 @@
         "file": "grove-barometer-edison.js",
         "title": "Intel Edison + Grove - Barometer (BMP180)",
         "description": "Using Johnny-Five with Grove's Barometer (BMP180) component on the Intel Edison Arduino Breakout. This shield and component will work with any Arduino pin-out compatible hardware platform."
+      },
+      {
+        "file": "grove-humidity-temperature-edison.js",
+        "title": "Intel Edison + Grove - Humidity & Temperature (TH02)",
+        "description": "Using Johnny-Five with Grove's Humidity & Temperature (TH02) component on the Intel Edison Arduino Breakout. This shield and component will work with any Arduino pin-out compatible hardware platform."
       },
       {
         "file": "grove-compass-edison.js",

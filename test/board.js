@@ -58,7 +58,7 @@ exports["Board"] = {
     done();
   },
 
-  explicit: function(test) {
+  explicitTransport: function(test) {
     test.expect(1);
 
     var sp = new MockSerialPort("/dev/foo", {
@@ -66,19 +66,56 @@ exports["Board"] = {
       buffersize: 128
     });
 
-    var board = new Board({
+    this.board = new Board({
       port: sp,
       debug: false,
       repl: false
     });
 
-    test.equal(board.io.sp, sp);
+    test.equal(this.board.io.transport, sp);
 
-    board.abort = true;
+    this.board.abort = true;
 
     setImmediate(function() {
       test.done();
     });
+  },
+
+  timeoutTransport: function(test) {
+
+    if (process.env.NO_SERIALPORT_INSTALL) {
+      test.done();
+    } else {
+      test.expect(1);
+
+      this.tm = Board.testMode();
+      this.clock = sinon.useFakeTimers();
+      this.setTimeout = sinon.stub(global, "setTimeout");
+
+      this.detect = sinon.stub(Board.Serial, "detect");
+
+      Board.testMode(false);
+      Board.purge();
+
+      var sp = new MockSerialPort("/dev/foo", {
+        baudrate: 57600,
+        buffersize: 128
+      });
+
+      this.board = new Board({
+        port: sp,
+        timeout: Infinity,
+        debug: false,
+        repl: false
+      });
+
+      test.equal(this.setTimeout.lastCall.args[1], Infinity);
+
+      Board.testMode(this.tm);
+
+      test.done();
+
+    }
   },
 
   ioIsReady: function(test) {
@@ -171,6 +208,37 @@ exports["Board"] = {
     io.emit("ready");
   },
 
+  emitExitNoRepl: function(test) {
+    test.expect(2);
+
+    var io = new MockFirmata();
+
+    io.name = "Foo";
+
+    var board = new Board({
+      io: io,
+      debug: false,
+      repl: false,
+      sigint: true,
+    });
+
+    var reallyExit = sinon.stub(process, "reallyExit", function() {
+      reallyExit.restore();
+      test.ok(true);
+      test.done();
+    });
+
+    board.on("ready", function() {
+      this.on("exit", function() {
+        test.ok(true);
+      });
+      process.emit("SIGINT");
+    });
+
+    io.emit("connect");
+    io.emit("ready");
+  },
+
   emitsLogsAsEvents: function(test) {
     test.expect(19);
 
@@ -189,7 +257,9 @@ exports["Board"] = {
       this.on("info", function(event) {
         test.equal(event.class, "Board");
         test.equal(event.message, "message 1");
-        test.deepEqual(event.data, { foo: 2 });
+        test.deepEqual(event.data, {
+          foo: 2
+        });
       });
 
       this.on("fail", function(event) {
@@ -218,7 +288,9 @@ exports["Board"] = {
         test.ok(true);
       });
 
-      this.info("Board", "message", 1, { foo: 2 });
+      this.info("Board", "message", 1, {
+        foo: 2
+      });
       this.fail("Board", "message");
       this.warn("Board", "message", [1, 2, 3]);
       this.log("Board", "message");

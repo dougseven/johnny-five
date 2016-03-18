@@ -1,6 +1,6 @@
 <!--remove-start-->
 
-# Temperature - HTU21D
+# Thermometer - HTU21D
 
 <!--remove-end-->
 
@@ -41,6 +41,7 @@ board.on("ready", function() {
     console.log(this.celsius + "°C", this.fahrenheit + "°F");
   });
 });
+
 
 ```
 

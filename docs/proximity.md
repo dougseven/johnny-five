@@ -5,7 +5,7 @@
 <!--remove-end-->
 
 
-Basic infrared Proximity example
+Infrared Proximity example
 
 
 
@@ -51,8 +51,6 @@ board.on("ready", function() {
     console.log("The obstruction has moved.");
   });
 });
-
-
 
 ```
 
